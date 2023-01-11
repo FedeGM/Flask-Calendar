@@ -1,0 +1,117 @@
+.visually-hidden {
+    position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+
+/*#################################*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*######################## START NAVBAR ####################*/
+header{
+    height: 15%;
+    margin: 0;
+    padding: 0;
+}
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+@media (max-width: 50em){
+    .primary-navigation{
+        display: none;
+    }
+    .primary-navigation[data-visible]{
+        display: block;
+        position: fixed;
+    }
+
+    .mobile-nav-toggle{
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: 0.5rem;
+    }
+    
+    .mobile-nav-toggle .icon-close{
+        display: none;
+    }
+}
+
+.opened{
+    display: block;
+    position: fixed;
+}
+
+.navbar-item{
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+/*######################## END NAVBAR ####################*/
+footer{
+    height: 10%;
+    margin-top: auto;
+}
+
+.flex-container{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    height: 75%;
+}
+
+.flex-container .item{
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    width: 3rem;
+    padding: 2rem 1rem;
+    border: 3px solid #51aaa3;
+    color: white;
+    margin: 0.375rem; 
+}
+
+.item-1{
+    background-color: blueviolet;
+    flex-grow: 2;
+}
+.item-2{
+    background-color: brown;
+    flex-grow: 1;
+}
+
+@media (max-width: 800px){
+    .flex-container {
+        flex-direction: column;
+        background-color: coral;
+    }
+    .flex-container .item{
+        width: auto;
+    }
+}
+
+/*#################################*/
+div.footer-section{
+    background-color: lightblue;
+}
